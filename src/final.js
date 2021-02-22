@@ -6,6 +6,7 @@ function displayTemperature(response){
     let windElement=document.querySelector("#wind");
     let temp_minElement=document.querySelector("#temp_min");
     let temp_maxElement=document.querySelector("#temp_max");
+    let iconElement=document.querySelector("#icon");
 
 
 
@@ -16,9 +17,11 @@ function displayTemperature(response){
     windElement.innerHTML=Math.round(response.data.wind.speed);
     temp_minElement.innerHTML=Math.round(response.data.main.temp_min);
     temp_maxElement.innerHTML=Math.round(response.data.main.temp_max);
-
+    iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("alt",response.data.weather[0].description);
 
 }
 let apiKey="40c070457645a25e3aed4a4bf9319268";
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=Erlangen&appid=${apiKey}&units=metric`;
+let city="Karachi";
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
