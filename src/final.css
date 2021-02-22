@@ -69,7 +69,5 @@ li {
 .weather-temperature .active {
   color: seashell;
   cursor: default;
-}
-.weather-temperature .active :hover {
   text-decoration: none;
 }

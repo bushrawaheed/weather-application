@@ -1,3 +1,15 @@
+let now=new Date();
+now.getMinutes();
+now.getHours();
+now.getDate();
+now.getDay();
+
+
+
+
+
+
+
 function displayTemperature(response){
     let cityElement=document.querySelector("#city");
     let descriptionElement =document.querySelector("#description");
@@ -20,10 +32,16 @@ function displayTemperature(response){
     iconElement.setAttribute("alt",response.data.weather[0].description);
 
 }
+function displayForecast(response){
+    console.log(response.data);
+}
 function search(city){
 let apiKey="40c070457645a25e3aed4a4bf9319268";
 let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
+apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayForecast);
+
 }
 function handlesearch(event){
     event.preventDefault();
