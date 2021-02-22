@@ -21,7 +21,17 @@ function displayTemperature(response){
     iconElement.setAttribute("alt",response.data.weather[0].description);
 
 }
+function search(city){
 let apiKey="40c070457645a25e3aed4a4bf9319268";
-let city="Karachi";
 let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
+}
+function handlesearch(event){
+    event.preventDefault();
+    let cityElement=document.querySelector("#Searchbar");
+   search(cityElement.value);
+}
+search("Erlangen");
+
+let form=document.querySelector("#navbar");
+form.addEventListener("submit",handlesearch);

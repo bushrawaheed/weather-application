@@ -25,6 +25,22 @@
     <div class="container">
       <div class="weather-widget">
         <div class="weather-app">
+          <form id="navbar" class="mb-4">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Search a city..."
+                  class="form-control"
+                  id="Searchbar"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </form>
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
@@ -35,10 +51,7 @@
           <div class="row">
             <div class="col-6">
               <div class="imagefix weather-temperature">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                  id="icon"
-                />
+                <img src="" alt="" id="icon" />
                 <strong id="temperature"></strong
                 ><span class="units">°C| <a href="#">°F</a> </span>
               </div>
