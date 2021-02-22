@@ -7,8 +7,7 @@ function displayTemperature(response){
     let temp_minElement=document.querySelector("#temp_min");
     let temp_maxElement=document.querySelector("#temp_max");
     let iconElement=document.querySelector("#icon");
-
-
+    celsiusTemperature=response.data.main.temp;
 
     cityElement.innerHTML=response.data.name;
     descriptionElement.innerHTML=response.data.weather[0].description;
@@ -31,7 +30,33 @@ function handlesearch(event){
     let cityElement=document.querySelector("#Searchbar");
    search(cityElement.value);
 }
-search("Erlangen");
 
+function showFahrenheitTemperature(event){
+    event.preventDefault();
+    celsiuslink.classList.remove("active");
+    fahrenheitlink.classList.add("active");
+let tempElement=document.querySelector("#temperature");
+let fahrenheitTemp=(celsiusTemperature* 9)/5 + 32;
+tempElement.innerHTML=Math.round(fahrenheitTemp);
+}
+
+function showcelsiusTemperature(event){
+    event.preventDefault();
+    celsiuslink.classList.add("active");
+    fahrenheitlink.classList.remove("active");
+    let temperatureElement=document.querySelector("#temperature");
+    temperatureElement.innerHTML=Math.round(celsiusTemperature);
+}
+let celsiusTemperature=null;
 let form=document.querySelector("#navbar");
 form.addEventListener("submit",handlesearch);
+
+
+let fahrenheitlink=document.querySelector("#fahrenheit-link");
+fahrenheitlink.addEventListener("click", showFahrenheitTemperature);
+
+let celsiuslink=document.querySelector("#celsius-link");
+celsiuslink.addEventListener("click", showcelsiusTemperature);
+
+
+search("Erlangen");
