@@ -1,9 +1,8 @@
 h1 {
   font-family: "Pacifico", cursive;
-  color: lightblue;
+  color: #314f8c;
   font-size: 44px;
   line-height: 30px;
-  text-align: left;
   margin-bottom: 10;
   margin-top: 30px;
 }
@@ -13,24 +12,28 @@ ul {
 }
 .description {
   text-transform: capitalize;
+  color: #87685f;
+}
+.overview {
+  color: #87685f;
+  text-align: center;
+  font-family: "Akaya Kanadaka", cursive;
 }
 li {
   list-style: none;
-  color: seashell;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
   line-height: 30px;
-  text-align: left;
 }
 .weather-widget {
   max-width: 800px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 .weather-app {
-  background-color: rgb(88, 163, 88);
-  padding: 25px;
-  border: 1px solid black;
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+  padding: 15px;
+  border: 1px solid #321a70;
   border-radius: 8px;
 }
 .overview {
@@ -43,7 +46,7 @@ li {
   float: left;
 }
 .weather-temperature strong {
-  color: seashell;
+  color: #314f8c;
   float: left;
   font-family: "Google Sans", arial, sans-serif;
   font-size: 64px;
@@ -54,7 +57,7 @@ li {
   line-height: normal;
 }
 .weather-temperature .units {
-  color: seashell;
+  color: #321a70;
   display: block;
   float: left;
   font-family: arial, helvetica, sans-serif;
@@ -67,10 +70,29 @@ li {
   margin-top: 6px;
 }
 .weather-temperature .active {
-  color: seashell;
+  color: #321a70;
   cursor: default;
   text-decoration: none;
 }
 .row-forecast {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: seashell;
+}
+h3 {
+  color: #87685f;
+  margin-bottom: 0.5rem;
+  font-weight: lighter;
+  line-height: 100px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.weather-description {
+  color: #87685f;
+}
+.weather-forecast-temperature {
+  color: #87685f;
+}
+
+.col-2 img {
+  line-height: 0px;
 }
