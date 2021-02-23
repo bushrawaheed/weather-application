@@ -1,6 +1,10 @@
+body {
+  background-image: url("https://images.pexels.com/photos/2689377/pexels-photo-2689377.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
 h1 {
   font-family: "Pacifico", cursive;
-  color: #314f8c;
+  color: #321a70;
   font-size: 44px;
   line-height: 30px;
   margin-bottom: 10;
@@ -12,10 +16,10 @@ ul {
 }
 .description {
   text-transform: capitalize;
-  color: #87685f;
+  color: #321a70;
 }
 .overview {
-  color: #87685f;
+  color: #321a70;
   text-align: center;
   font-family: "Akaya Kanadaka", cursive;
 }
@@ -31,10 +35,18 @@ li {
   padding-top: 20px;
 }
 .weather-app {
-  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
-  padding: 15px;
+  background-image: linear-gradient(
+    to top,
+    lightgrey 0%,
+    lightgrey 1%,
+    #e0e0e0 26%,
+    #efefef 48%,
+    #d9d9d9 75%,
+    #bcbcbc 100%
+  );
+  padding: 60px 60px;
   border: 1px solid #321a70;
-  border-radius: 8px;
+  border-radius: 100px;
 }
 .overview {
   margin-bottom: 20px;
@@ -46,7 +58,7 @@ li {
   float: left;
 }
 .weather-temperature strong {
-  color: #314f8c;
+  color: #321a70;
   float: left;
   font-family: "Google Sans", arial, sans-serif;
   font-size: 64px;
@@ -74,12 +86,9 @@ li {
   cursor: default;
   text-decoration: none;
 }
-.row-forecast {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: seashell;
-}
+
 h3 {
-  color: #87685f;
+  color: #1a669b;
   margin-bottom: 0.5rem;
   font-weight: lighter;
   line-height: 100px;
@@ -90,9 +99,11 @@ h3 {
   color: #87685f;
 }
 .weather-forecast-temperature {
-  color: #87685f;
+  color: #1a669b;
 }
-
-.col-2 img {
-  line-height: 0px;
+.btn.btn-primary {
+  margin-top: 0px;
+}
+.git-link {
+  color: #321a70;
 }
