@@ -17,8 +17,8 @@ ul {
 li {
   list-style: none;
   color: seashell;
-  font-family: "Google Sans", arial, sans-serif;
-  font-size: 22px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
   line-height: 30px;
   text-align: left;
 }
@@ -28,7 +28,7 @@ li {
   padding-top: 50px;
 }
 .weather-app {
-  background-color: rgba(0, 0, 0, 0.788);
+  background-color: rgb(88, 163, 88);
   padding: 25px;
   border: 1px solid black;
   border-radius: 8px;
@@ -70,4 +70,7 @@ li {
   color: seashell;
   cursor: default;
   text-decoration: none;
+}
+.row-forecast {
+  color: seashell;
 }
